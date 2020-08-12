@@ -21,26 +21,21 @@ final class InstrumentCalculator {
     }
 
     func firstMomentAbout(point: Double) throws -> Double {
-        guard !elements.isEmpty else {
-            throw InvalidBasisException.noElement
-        }
-        var numerator = 0.0
-
-        for it in elements {
-            numerator += it - point
-        }
-
-        return numerator / Double(elements.count)
+        try nthMomentAbout(point: point, n: 1.0)
     }
 
     func secondMomentAbout(point: Double) throws -> Double {
+        try nthMomentAbout(point: point, n: 2.0)
+    }
+
+    private func nthMomentAbout(point: Double, n: Double) throws -> Double {
         guard !elements.isEmpty else {
             throw InvalidBasisException.noElement
         }
         var numerator = 0.0
 
         for it in elements {
-            numerator += pow(it - point, 2.0)
+            numerator += pow(it - point, n)
         }
 
         return numerator / Double(elements.count)
