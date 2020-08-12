@@ -28,4 +28,13 @@ class TDDSampleTests: XCTestCase {
             XCTAssertEqual((error as? InvalidBasisException), InvalidBasisException.noElement)
         }
     }
+
+    func testSecondMomentAbout() {
+        let calculator = InstrumentCalculator()
+
+        calculator.add(element: 1.0)
+        calculator.add(element: 2.0)
+
+        XCTAssertEqual(0.5, try! calculator.secondMomentAbout(point: 2.0))
+    }
 }
