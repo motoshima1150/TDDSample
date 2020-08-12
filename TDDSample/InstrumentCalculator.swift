@@ -8,11 +8,18 @@
 
 import Foundation
 
+enum InvalidBasisException: Error {
+    case noElement
+}
+
 final class InstrumentCalculator {
 
     var elements = [Double]()
 
-    func firstMomentAbout(point: Double) -> Double {
+    func firstMomentAbout(point: Double) throws -> Double {
+        guard !elements.isEmpty else {
+            throw InvalidBasisException.noElement
+        }
         var numerator = 0.0
 
         for it in elements {

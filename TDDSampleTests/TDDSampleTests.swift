@@ -25,7 +25,7 @@ class TDDSampleTests: XCTestCase {
             try calculator.firstMomentAbout(point: 0.0)
             XCTFail("expected InvalidBasisException")
         } catch {
-            print(error.localizedDescription)
+            XCTAssertEqual((error as? InvalidBasisException), InvalidBasisException.noElement)
         }
     }
 }
