@@ -16,6 +16,16 @@ class TDDSampleTests: XCTestCase {
         calculator.add(element: 1.0)
         calculator.add(element: 2.0)
 
-        XCTAssertEqual(-0.5, calculator.firstMomentAbout(point: 2.0))
+        XCTAssertEqual(-0.5, try! calculator.firstMomentAbout(point: 2.0))
+    }
+
+    func testFirstMomentException() {
+        let calculator = InstrumentCalculator()
+        do {
+            try calculator.firstMomentAbout(point: 0.0)
+            XCTFail("expected InvalidBasisException")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
