@@ -40,7 +40,7 @@ final class InstrumentCalculator {
         var numerator = 0.0
 
         for it in elements {
-            numerator += it - point
+            numerator += pow(it - point, 2.0)
         }
 
         return numerator / Double(elements.count)
