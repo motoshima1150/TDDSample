@@ -9,11 +9,20 @@
 import Foundation
 
 final class InstrumentCalculator {
-    func firstMomentAbout(element: Double) -> Double {
-        return Double.nan
+
+    var elements = [Double]()
+
+    func firstMomentAbout(point: Double) -> Double {
+        var numerator = 0.0
+
+        for it in elements {
+            numerator += it - point
+        }
+
+        return numerator / Double(elements.count)
     }
 
     func add(element: Double) {
-
+        elements.append(element)
     }
 }

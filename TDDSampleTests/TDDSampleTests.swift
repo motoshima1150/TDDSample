@@ -16,6 +16,6 @@ class TDDSampleTests: XCTestCase {
         calculator.add(element: 1.0)
         calculator.add(element: 2.0)
 
-        XCTAssertEqual(-0.5, calculator.firstMomentAbout(element: 2.0))
+        XCTAssertEqual(-0.5, calculator.firstMomentAbout(point: 2.0))
     }
 }
