@@ -10,6 +10,7 @@
 		40C4217724E3B13F00CA488A /* TDDSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C4216D24E3B13F00CA488A /* TDDSample.framework */; };
 		40C4217C24E3B13F00CA488A /* TDDSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4217B24E3B13F00CA488A /* TDDSampleTests.swift */; };
 		40C4217E24E3B13F00CA488A /* TDDSample.h in Headers */ = {isa = PBXBuildFile; fileRef = 40C4217024E3B13F00CA488A /* TDDSample.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40C4218824E3B17B00CA488A /* InstrumentCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4218724E3B17B00CA488A /* InstrumentCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		40C4217624E3B13F00CA488A /* TDDSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C4217B24E3B13F00CA488A /* TDDSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDSampleTests.swift; sourceTree = "<group>"; };
 		40C4217D24E3B13F00CA488A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C4218724E3B17B00CA488A /* InstrumentCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				40C4217024E3B13F00CA488A /* TDDSample.h */,
 				40C4217124E3B13F00CA488A /* Info.plist */,
+				40C4218724E3B17B00CA488A /* InstrumentCalculator.swift */,
 			);
 			path = TDDSample;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					40C4216C24E3B13F00CA488A = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					40C4217524E3B13F00CA488A = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C4218824E3B17B00CA488A /* InstrumentCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		40C4218224E3B13F00CA488A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = motoshima1150.TDDSample;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +370,7 @@
 		40C4218324E3B13F00CA488A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +394,7 @@
 		40C4218524E3B13F00CA488A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TDDSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +412,7 @@
 		40C4218624E3B13F00CA488A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TDDSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
